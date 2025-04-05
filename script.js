@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const coverImages = [
     { src: 'the.jpg', name: 'The Great Reset 2030 by AVS', videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_1' },
     { src: 'tokens.jpg', name: 'Smart Contract and Security', videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID_2' },
@@ -106,3 +107,7 @@ function searchCover() {
     }
   }
 }
+=======
+// Anda bisa menambahkan fungsionalitas JavaScript di sini nanti jika diperlukan
+console.log('Website Kelas Berjalan!');
+>>>>>>> 1bf2df6af39daf88b6549732fff5dc47eaaa3b7e
