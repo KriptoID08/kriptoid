@@ -1,0 +1,102 @@
+/* Mengatur tampilan dasar halaman */
+html, body {
+  height: 100%; /* Pastikan seluruh halaman ter-cover */
+  margin: 0;
+  padding: 0;
+}
+
+/* Mengatur background untuk body menjadi ungu tua cenderung hitam */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #100810; /* Ungu tua cenderung hitam */
+  color: white; /* Mengubah warna teks menjadi putih agar lebih kontras */
+}
+
+/* Input pencarian */
+.search-container {
+  text-align: center;
+  margin: 20px;
+}
+
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Mengatur layout kontainer gambar menggunakan grid */
+.cover-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Menampilkan 4 gambar per baris */
+  gap: 20px; /* Memberikan jarak antar gambar */
+  padding: 20px;
+  justify-items: center; /* Menyelaraskan gambar di tengah grid */
+}
+
+/* Mengatur tampilan gambar */
+.cover-item {
+  position: relative;
+  text-align: center;
+}
+
+.cover-item img {
+  width: 100%; /* Membuat gambar mengisi lebar kontainer */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover; /* Agar gambar tidak terdistorsi dan tetap sesuai proporsi */
+}
+
+/* Efek saat gambar dihover */
+.cover-item img:hover {
+  transform: scale(1.05);  /* Memberikan efek zoom saat gambar di-hover */
+}
+
+/* Menata nama cover */
+.cover-name {
+  position: absolute;
+  bottom: 0;  /* Posisi nama di bagian bawah gambar */
+  left: 50%;
+  transform: translateX(-50%);  /* Memastikan teks berada di tengah horizontal */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6); /* Memberikan latar belakang sedikit transparan */
+  padding: 20px 1px; /* Menambah padding agar background lebih panjang */
+  border-radius: 0 0 8px 8px; /* Sudut melengkung di bagian bawah */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);  /* Menambahkan bayangan di bawah teks */
+  width: 100%;  /* Membuat lebar background sesuai dengan gambar */
+  text-align: center;  /* Menjaga teks tetap berada di tengah */
+  font-family: 'Arial', sans-serif; /* Pilih font yang bersih dan modern */
+  margin-bottom: -10px;  /* Menggeser background ke bawah */
+}
+
+/* Responsif: 2 gambar per baris pada layar lebih kecil (tablet atau lebih kecil) */
+@media (max-width: 1024px) {
+  .cover-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cover-name {
+    font-size: 16px;  /* Menyesuaikan ukuran font untuk tablet */
+    padding: 15px 10px;  /* Menyesuaikan padding agar lebih proporsional */
+    margin-bottom: -12px;  /* Menggeser background lebih ke bawah untuk tablet */
+  }
+}
+
+/* Responsif: 1 gambar per baris pada layar lebih kecil (smartphone) */
+@media (max-width: 600px) {
+  .cover-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-name {
+    font-size: 14px;  /* Menyesuaikan ukuran font untuk smartphone */
+    padding: 12px 8px;  /* Menyesuaikan padding untuk layar kecil */
+    margin-bottom: -8px;  /* Menggeser background sedikit lebih ke bawah pada smartphone */
+  }
+}
